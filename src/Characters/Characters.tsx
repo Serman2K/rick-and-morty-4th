@@ -1,7 +1,7 @@
 function Characters() {
     return (
         <>
-            Characters
+            Characters Route
         </>
     )
 }

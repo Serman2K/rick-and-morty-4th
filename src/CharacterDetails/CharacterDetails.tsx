@@ -1,7 +1,7 @@
 function CharacterDetails() {
     return (
         <>
-            Character Details
+            Character Details Route
         </>
     )
 }
