@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "./App.css";
 import Image from "../assets/image.png";
 import Episodes from "../Episodes/Episodes";
@@ -41,7 +41,7 @@ function Layout() {
 function Main() {
   return (
     <>
-      <p>
+      <p className="main__title">
         Episodes of the <b>4th</b>
         <br /> season of the series <br />
         <span className="cyan">Rick and Morty</span>

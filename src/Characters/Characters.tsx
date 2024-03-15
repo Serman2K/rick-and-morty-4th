@@ -1,13 +1,9 @@
-import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Characters() {
   const navigate = useNavigate();
   let location = useLocation();
-  React.useEffect(() => {
-    console.log(location.state.key);
-  });
   const CHARACTERS_QUERY = gql`
         {
             episode(id: ${location.state.key}) {
@@ -25,18 +21,19 @@ function Characters() {
   if (loading) return "Loading...";
   if (error) return <pre>{error.message}</pre>;
 
-  const characterElements = data.episode.characters.map((character: any) => (
+  const characterElements = data.episode.characters.map((character: any, i: number) => (
     <>
-      <dt
+      <li
+        className={"primary__info" + ((i+1) % 2 === 0 ? " even" : "")}
         onClick={() => navigate("/details", { state: { key: character.id } })}
       >
         {character.name}
-      </dt>
-      <dd>{character.species}</dd>
+      </li>
+      <li className="secondary__info">{character.species}</li>
     </>
   ));
 
-  return <dl>{characterElements}</dl>;
+  return <ul>{characterElements}</ul>;
 }
 
 export default Characters;

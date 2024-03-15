@@ -28,7 +28,7 @@ footer {
   font-weight: bold;
 }
 
-p {
+.main__title {
   font-size: 50.75px;
 }
 
@@ -60,4 +60,26 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.episode--num {
+  font-weight: bold;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.secondary__info {
+  color: #959595;
+  font-weight: bold;
+}
+
+.primary__info {
+  color: #00BDD4;
+  font-weight: bold;
+}
+.even {
+  color: #BDD800;
 }

@@ -1,6 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import "./Episodes.css";
 
 const EPISODES_QUERY = gql`
   {
@@ -28,7 +27,7 @@ function Episodes() {
         <td className="episode--num">{episode.episode}</td>
         <td>
           <span
-            className={"episode--title " + (i % 2 === 0 ? "blue" : "green")}
+            className={"primary__info" + ((i+1) % 2 === 0 ? " even" : "")}
             onClick={() =>
               navigate("/characters", { state: { key: episode.id } })
             }
@@ -36,7 +35,7 @@ function Episodes() {
             {episode.name}
           </span>
           <br />
-          <span className="episode--date">{episode.air_date}</span>
+          <span className="secondary__info">{episode.air_date}</span>
         </td>
       </tr>
     )
