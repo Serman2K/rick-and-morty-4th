@@ -52,7 +52,7 @@ function Main() {
 }
 
 function Header() {
-  return <header>LOREM IPSUM</header>;
+  return <header className="header"><p>LOREM IPSUM</p></header>;
 }
 
 function Footer() {

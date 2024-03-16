@@ -1,12 +1,18 @@
-header {
+.header {
   display: flex;
   align-items: center;
   height: 69px;
-  background: #DAED49;
+  background: linear-gradient(121deg, #DAED49 50%, #00BDD4 50%);
   color: #000000;
   font-weight: bold;
   font-size: 25.4px;
   width: 100%;
+}
+@media only screen and (orientation: portrait) {
+  .header {
+    background: #DAED49;
+    justify-content: center;
+  }
 }
 
 footer {
