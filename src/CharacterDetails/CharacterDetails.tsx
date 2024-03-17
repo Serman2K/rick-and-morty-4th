@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { useLocation } from "react-router-dom";
+import Leftside from "../Main/Leftside";
 
 function CharacterDetails() {
   let location = useLocation();
@@ -26,6 +27,8 @@ function CharacterDetails() {
   if (error) return <pre>{error.message}</pre>;
 
   return (
+    <div className="main__content">
+      <Leftside name={data.character.name} url={data.character.image}/>
     <ul>
       <li className="primary__info">{data.character.status}</li>
       <li className="secondary__info">Status</li>
@@ -42,7 +45,8 @@ function CharacterDetails() {
       <li className="primary__info even">{data.character.location.name}</li>
       <li className="secondary__info">Last known location</li>
     </ul>
-  );
+    </div>
+  )
 }
 
 export default CharacterDetails;
