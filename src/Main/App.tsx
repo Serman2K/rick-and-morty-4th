@@ -28,27 +28,14 @@ function Layout() {
   );
 }
 
-// function Main() {
-//   return (
-//     <>
-//       <p className="main__title">
-//         Episodes of the <b>4th</b>
-//         <br /> season of the series <br />
-//         <span className="cyan">Rick and Morty</span>
-//       </p>
-//       <img src={Image} className="image" />
-//     </>
-//   );
-// }
-
 function Header() {
   return (
-    <header className="header">
-      <p>LOREM IPSUM</p>
+    <header>
+      <p className="header__text">LOREM IPSUM</p>
     </header>
   );
 }
 
 function Footer() {
-  return <footer>LOREM IPSUM ©2021</footer>;
+  return <footer><p className="footer__text">LOREM IPSUM ©2021</p></footer>;
 }

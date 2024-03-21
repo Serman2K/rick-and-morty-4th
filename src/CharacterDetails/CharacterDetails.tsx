@@ -1,9 +1,11 @@
 import { useQuery, gql } from "@apollo/client";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Leftside from "../Main/Leftside";
+import Arrow from "../assets/arrow.png";
 
 function CharacterDetails() {
   let location = useLocation();
+  let navigate = useNavigate();
 
   const DETAILS_QUERY = gql`
   {
@@ -27,26 +29,34 @@ function CharacterDetails() {
   if (error) return <pre>{error.message}</pre>;
 
   return (
-    <div className="main__content">
-      <Leftside name={data.character.name} url={data.character.image}/>
-    <ul>
-      <li className="primary__info">{data.character.status}</li>
-      <li className="secondary__info">Status</li>
-      <li className="primary__info even">{data.character.species}</li>
-      <li className="secondary__info">Species</li>
-      <li className="primary__info">
-        {data.character.type === "" ? "-" : data.character.type}
-      </li>
-      <li className="secondary__info">Type</li>
-      <li className="primary__info even">{data.character.gender}</li>
-      <li className="secondary__info">Gender</li>
-      <li className="primary__info">{data.character.origin.name}</li>
-      <li className="secondary__info">Origin</li>
-      <li className="primary__info even">{data.character.location.name}</li>
-      <li className="secondary__info">Last known location</li>
-    </ul>
-    </div>
-  )
+    <>
+      <nav className="button__space">
+        <button className="button__back" onClick={() => navigate(-1)}>
+          <img className="back__arrow" src={Arrow} />
+          Characters
+        </button>
+      </nav>
+      <section className="main__content">
+        <Leftside name={data.character.name} url={data.character.image} />
+        <ul className="details__list">
+          <li className="primary__info">{data.character.status}</li>
+          <li className="secondary__info">Status</li>
+          <li className="primary__info even">{data.character.species}</li>
+          <li className="secondary__info">Species</li>
+          <li className="primary__info">
+            {data.character.type === "" ? "-" : data.character.type}
+          </li>
+          <li className="secondary__info">Type</li>
+          <li className="primary__info even">{data.character.gender}</li>
+          <li className="secondary__info">Gender</li>
+          <li className="primary__info">{data.character.origin.name}</li>
+          <li className="secondary__info">Origin</li>
+          <li className="primary__info even">{data.character.location.name}</li>
+          <li className="secondary__info">Last known location</li>
+        </ul>
+      </section>
+    </>
+  );
 }
 
 export default CharacterDetails;
