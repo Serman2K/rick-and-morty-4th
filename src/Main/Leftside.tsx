@@ -4,24 +4,24 @@ import Image from "../assets/image.png";
 export default function Leftside(props: any) {
   if (useLocation().pathname === "/")
     return (
-      <div>
-        <p className="main__title">
-          Episodes of the{" "}
-          <b>
-            {props.season +
-              (props.season === "1"
-                ? "st"
-                : props.season === "2"
-                ? "nd"
-                : props.season === "3"
-                ? "rd"
-                : "th")}
-          </b>
-          <br />
-          season of the series
-          <br />
+      <div className="main__left__Margin">
+        <div className="main__title">
+          <p>
+            Episodes of the{" "}
+            <b>
+              {props.season +
+                (props.season === "1"
+                  ? "st"
+                  : props.season === "2"
+                  ? "nd"
+                  : props.season === "3"
+                  ? "rd"
+                  : "th")}
+            </b>
+          </p>
+          <p>season of the series</p>
           <span className="cyan">Rick and Morty</span>
-        </p>
+        </div>
 
         <img src={Image} className="image" />
       </div>
@@ -29,44 +29,47 @@ export default function Leftside(props: any) {
 
   if (useLocation().pathname === "/characters")
     return (
-      <div>
-        <p className="main__title">
-          Characters of the{" "}
-          <b>
-            {props.episode +
-              (props.episode === "1"
-                ? "st"
-                : props.episode === "2"
-                ? "nd"
-                : props.episode === "3"
-                ? "rd"
-                : "th")}
-          </b>
-          <br />
-          episode of the <b>
-            {props.season +
-              (props.season === "1"
-                ? "st"
-                : props.season === "2"
-                ? "nd"
-                : props.season === "3"
-                ? "rd"
-                : "th")}
-          </b><br />
-          season of the series
-          <br />
+      <div className="content__left__Margin">
+        <div className="main__title">
+          <p>
+            Characters of the{" "}
+            <b>
+              {props.episode +
+                (props.episode === "1"
+                  ? "st"
+                  : props.episode === "2"
+                  ? "nd"
+                  : props.episode === "3"
+                  ? "rd"
+                  : "th")}
+            </b>
+          </p>
+          <p>
+            episode of the{" "}
+            <b>
+              {props.season +
+                (props.season === "1"
+                  ? "st"
+                  : props.season === "2"
+                  ? "nd"
+                  : props.season === "3"
+                  ? "rd"
+                  : "th")}
+            </b>
+          </p>
+          <p>season of the series</p>
           <span className="cyan">Rick and Morty</span>
-        </p>
+        </div>
 
         <img src={Image} className="image" />
       </div>
-    )
+    );
 
-    if (useLocation().pathname === "/details")
+  if (useLocation().pathname === "/details")
     return (
-<div>
-    <p>{props.name}</p>
-    <img src={props.url} className="image" />
-</div>
-)
+      <div className="content__left__Margin">
+        <h1 className="details__name cyan">{props.name}</h1>
+        <img src={props.url} className="details__image" />
+      </div>
+    );
 }
