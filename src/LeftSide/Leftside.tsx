@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Image from "../assets/image.png";
+import "./LeftSide.css"
 
 export default function Leftside(props: any) {
   if (useLocation().pathname === "/")

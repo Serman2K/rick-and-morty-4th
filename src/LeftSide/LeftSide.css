@@ -1,0 +1,29 @@
+.main__title {
+    font-size: 4.375rem;
+    margin-bottom: 4.375rem;
+    margin-left: 1.0625rem;
+    min-height: 14.875rem;
+    line-height: 1.1;
+  }
+
+  .content__left__Margin {
+    margin-left: 11.25rem;
+  }
+
+  .main__left__Margin {
+    margin-left: 11.25rem;
+    margin-top: 6.8125rem;
+  }
+
+  .details__name {
+    display: flex;
+    font-size: 4.375rem;
+    margin-top: 3.75rem;
+    margin-bottom: 11.25rem;
+    margin-left: 7.125rem;
+  }
+
+  .details__image {
+    width: 40.625rem;
+    height: 40.625rem;
+  }

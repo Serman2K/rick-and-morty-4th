@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { useLocation, useNavigate } from "react-router-dom";
-import Leftside from "../Main/Leftside";
+import Leftside from "../LeftSide/Leftside";
 import Arrow from "../assets/arrow.png";
 
 function Characters() {

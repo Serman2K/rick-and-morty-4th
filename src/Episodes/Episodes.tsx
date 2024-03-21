@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import Leftside from "../Main/Leftside";
+import Leftside from "../LeftSide/Leftside";
 import "./Episodes.css";
 
 const EPISODES_QUERY = gql`
