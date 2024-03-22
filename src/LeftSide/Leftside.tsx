@@ -5,7 +5,7 @@ import "./LeftSide.css"
 export default function Leftside(props: any) {
   if (useLocation().pathname === "/")
     return (
-      <div className="main__left__Margin">
+      <div className="leftSide__episodes__margin">
         <div className="main__title">
           <p>
             Episodes of the{" "}

@@ -2,6 +2,7 @@ import { useQuery, gql } from "@apollo/client";
 import { useLocation, useNavigate } from "react-router-dom";
 import Leftside from "../LeftSide/Leftside";
 import Arrow from "../assets/arrow.png";
+import "./Character.css"
 
 function Characters() {
   const navigate = useNavigate();
@@ -26,15 +27,15 @@ function Characters() {
 
   const characterElements = data.episode.characters.map(
     (character: any, i: number) => (
-      <article key={character.id}>
-        <li
+      <li key={character.id}>
+        <p
           className={"primary__info" + ((i + 1) % 2 === 0 ? " even" : "")}
           onClick={() => navigate("/details", { state: { key: character.id } })}
         >
           {character.name}
-        </li>
-        <li className="secondary__info">{character.species}</li>
-      </article>
+        </p>
+        <p className="secondary__info">{character.species}</p>
+      </li>
     )
   );
 

@@ -10,7 +10,6 @@ header {
   font-weight: bold;
   width: 100%;
 }
-
 .header__text {
   position: relative;
   display: flex;
@@ -33,7 +32,6 @@ footer {
   width: 100%;
   top: 100vh;
 }
-
 .footer__text {
   color: #CCCCCC;
   font-weight: bold;
@@ -44,13 +42,22 @@ footer {
   header {
     background: #DAED49;
     justify-content: center;
-    font-size: 1.875rem;
+    align-items: center;
     height: 4.4375rem;
+  }
+  .header__text {
+    margin: 0 0 0 0;
+    top: 0;
+    left: 0;
+    font-size: 1.875rem;
   }
 
   footer {
     font-size: 0.875rem;
     height: 3.045rem;
+  }
+  .footer__text {
+    font-size: 0.875rem;
   }
 }
 
@@ -90,11 +97,6 @@ ul {
 }
 .even {
   color: #BDD800;
-}
-
-.characters__list {
-  margin-top: 3.5rem;
-  margin-left: 12.875rem;
 }
 
 .button__back {

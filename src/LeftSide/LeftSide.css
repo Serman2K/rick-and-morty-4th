@@ -6,11 +6,16 @@
     line-height: 1.1;
   }
 
+.main__title  > p{
+  line-height: 1.05;
+}
+
   .content__left__Margin {
     margin-left: 11.25rem;
+    margin-top: 1.875rem;
   }
 
-  .main__left__Margin {
+  .leftSide__episodes__margin {
     margin-left: 11.25rem;
     margin-top: 6.8125rem;
   }
@@ -18,7 +23,7 @@
   .details__name {
     display: flex;
     font-size: 4.375rem;
-    margin-top: 3.75rem;
+    margin-top: 1.875rem;
     margin-bottom: 11.25rem;
     margin-left: 7.125rem;
   }

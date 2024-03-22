@@ -1,0 +1,6 @@
+.characters__list {
+    margin-top: 3.5rem;
+    margin-left: 11.625rem;
+    max-height: calc(100vh - 24.3rem);
+    overflow-y: auto;
+  }
