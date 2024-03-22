@@ -1,0 +1,38 @@
+.episode__num {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5625rem;
+}
+
+.episode__list {
+  margin-top: 8.5rem;
+  margin-left: 13.0625rem;
+}
+
+.episode__element {
+  display: flex;
+  flex-direction: row;
+}
+
+.episode__right__Margin {
+  margin-right: 2.09375rem;
+}
+
+.episode__left__Margin {
+  margin-left: 1.84375rem;
+}
+
+.episode__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.3125rem;
+}
+.episode__title::before {
+  content: "";
+  position: absolute;
+  background-color: #d1d1d1;
+  top: -1rem;
+  width: 0.0625rem;
+  height: 160%;
+}
