@@ -31,7 +31,7 @@ export default function Leftside(props: any) {
   if (useLocation().pathname === "/characters")
     return (
       <div className="content__left__Margin">
-        <div className="main__title">
+        <div className="characters__title">
           <p>
             Characters of the{" "}
             <b>

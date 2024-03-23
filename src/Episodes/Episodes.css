@@ -5,8 +5,7 @@
 }
 
 .episode__list {
-  margin-top: 8.5rem;
-  margin-left: 13.0625rem;
+  margin: 8.5rem 0 0 13.0625rem;
 }
 
 .episode__element {
@@ -35,4 +34,41 @@
   top: -1rem;
   width: 0.0625rem;
   height: 160%;
+}
+
+@media only screen and (orientation: portrait) {
+  .episode__num {
+    font-size: 1.125rem;
+    margin-bottom: 0.8125rem;
+  }
+
+  .episode__list {
+    display: flex;
+    margin: 7rem 1.53125rem 0 1.5625rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .episode__title {
+    margin: 0 0 0 0;
+  }
+  .episode__title::before {
+    content: none;
+  }
+
+  .episode__element {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .episode__left__Margin {
+    margin: 0 0 0 0;
+  }
+
+  .line {
+    background: #D1D1D1;
+    height: 1px;
+    margin: 1.34375rem 0 1.09375rem 0.03125rem;
+    width: 100%;
+  }
 }

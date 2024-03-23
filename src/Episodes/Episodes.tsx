@@ -6,6 +6,9 @@ import "./Episodes.css";
 const EPISODES_QUERY = gql`
   {
     episodes(filter: { episode: "S04" }) {
+      info {
+        count
+      }
       results {
         id
         episode
@@ -44,6 +47,7 @@ function Episodes() {
             <span className="secondary__info">{episode.air_date}</span>
           </div>
         </section>
+        <p className={i + 1 < data.episodes.info.count ? "line" : ""}></p>
       </div>
     )
   );

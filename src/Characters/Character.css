@@ -1,6 +1,14 @@
 .characters__list {
-    margin-top: 3.5rem;
-    margin-left: 11.625rem;
-    max-height: calc(100vh - 24.3rem);
-    overflow-y: auto;
+  margin: 3.5rem 0 0 11.625rem;
+  max-height: calc(100vh - 24.3rem);
+  overflow-y: auto;
+}
+
+@media only screen and (orientation: portrait) {
+  .characters__list {
+    margin: 7rem 1.5rem 0 1.5625rem;
+    overflow-y: none;
+    max-height: none;
+    width: 100%;
   }
+}
