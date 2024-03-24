@@ -4,6 +4,10 @@
     max-height: 32.4375rem;
   }
 
+.cursor {
+  cursor: auto;
+}
+
 @media only screen and (orientation: portrait) {
   .details__list {
     margin: 7rem 1.3125rem 0rem 1.75rem;

@@ -8,6 +8,10 @@
   margin: 8.5rem 0 0 13.0625rem;
 }
 
+.primary__info {
+  cursor: pointer;
+}
+
 .episode__element {
   display: flex;
   flex-direction: row;
