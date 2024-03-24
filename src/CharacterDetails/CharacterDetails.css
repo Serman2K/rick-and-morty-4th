@@ -1,0 +1,23 @@
+.details__list {
+    margin-top: 3.5rem;
+    margin-left: 12.875rem;
+    max-height: 32.4375rem;
+  }
+
+.cursor {
+  cursor: auto;
+}
+
+@media only screen and (orientation: portrait) {
+  .details__list {
+    margin: 7rem 1.3125rem 0rem 1.75rem;
+    width: 100%;
+  }
+
+  .line {
+    background: #D1D1D1;
+    height: 1px;
+    margin: 1.3125rem 0 1.125rem 0.0625rem;
+    width: 100%;
+  }
+}
