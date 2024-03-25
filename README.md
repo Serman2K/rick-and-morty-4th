@@ -1,6 +1,6 @@
 App with information on the 4th season of the Rick and Morty series.
 
-Visualisation:
+Visualisation(Code view only):
  _______________________________________________________
 |                          Header                       |
 |-------------------------------------------------------|
