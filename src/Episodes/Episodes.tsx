@@ -54,7 +54,7 @@ function Episodes() {
             <span className="secondary__info">{episode.air_date}</span> {/*Episode Date*/}
           </div>
         </section>
-        <p className={i + 1 < data.episodes.info.count ? "line" : ""}></p> {/*Only for mobile view*/}
+        <div className={i + 1 < data.episodes.info.count ? "line" : ""}></div> {/*Only for mobile view*/}
       </aside>
     )
   );

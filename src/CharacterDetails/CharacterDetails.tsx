@@ -53,35 +53,35 @@ function CharacterDetails() {
             <dt className="primary__info  cursor">{data.character.status}</dt>
             <dd className="secondary__info">Status</dd>
           </div>
-          <li className="line"></li> {/*Only for mobile view*/}
+          <div className="line"></div> {/*Only for mobile view*/}
           <div>
             <dt className="primary__info even cursor">
               {data.character.species}
             </dt>
             <dd className="secondary__info">Species</dd>
           </div>
-          <li className="line"></li> {/*Only for mobile view*/}
+          <div className="line"></div> {/*Only for mobile view*/}
           <div>
             <dt className="primary__info cursor">
               {data.character.type === "" ? "-" : data.character.type}
             </dt>
             <dd className="secondary__info">Type</dd>
           </div>
-          <li className="line"></li> {/*Only for mobile view*/}
+          <div className="line"></div> {/*Only for mobile view*/}
           <div>
             <dt className="primary__info even cursor">
               {data.character.gender}
             </dt>
             <dd className="secondary__info">Gender</dd>
           </div>
-          <li className="line"></li> {/*Only for mobile view*/}
+          <div className="line"></div> {/*Only for mobile view*/}
           <div>
             <dt className="primary__info cursor">
               {data.character.origin.name}
             </dt>
             <dd className="secondary__info">Origin</dd>
           </div>
-          <li className="line"></li> {/*Only for mobile view*/}
+          <div className="line"></div> {/*Only for mobile view*/}
           <div>
             <dt className="primary__info even cursor">
               {data.character.location.name}

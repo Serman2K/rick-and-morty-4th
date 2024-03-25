@@ -44,7 +44,7 @@ function Characters() {
           {character.name}
         </p>
         <p className="secondary__info">{character.species}</p>
-        <p className={i + 1 < data.episode.characters.length ? "line" : ""}></p> {/*Only for mobile view*/}
+        <div className={i + 1 < data.episode.characters.length ? "line" : ""}></div> {/*Only for mobile view*/}
       </li>
     )
   );
