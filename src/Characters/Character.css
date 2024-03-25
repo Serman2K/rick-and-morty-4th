@@ -1,7 +1,9 @@
 .characters__list {
   margin: 3.5rem 0 0 11.625rem;
-  max-height: calc(100vh - 24.3rem);
+  max-height: calc(90vh - 24.3rem);
   overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
 }
 
 @media only screen and (orientation: portrait) {

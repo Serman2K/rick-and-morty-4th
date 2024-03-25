@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
-import Leftside from "../LeftSide/Leftside";
+import LeftSideEpisodes from "./LeftSideEpisodes";
 import "./Episodes.css";
 
 const EPISODES_QUERY = gql`
@@ -26,11 +26,18 @@ function Episodes() {
   if (loading) return "Loading...";
   if (error) return <pre>{error.message}</pre>;
 
+  interface Episode {
+    id: string;
+    episode: string;
+    name: string;
+    air_date: string;
+  }
+
   const episodeElements = data.episodes.results.map(
-    (episode: any, i: number) => (
-      <div className="episode__element" key={episode.id}>
+    (episode: Episode, i: number) => (
+      <aside className="episode__element" key={episode.id}>
         <div className="episode__right__Margin">
-          <p className="episode__num">{episode.episode}</p>
+          <p className="episode__num">{episode.episode}</p> {/*S0XEYZ*/}
         </div>
         <section className="episode__title">
           <div className="episode__left__Margin">
@@ -41,20 +48,20 @@ function Episodes() {
               }
             >
               {episode.name}
-            </p>
+            </p> {/*Episode Title*/}
           </div>
           <div className="episode__left__Margin">
-            <span className="secondary__info">{episode.air_date}</span>
+            <span className="secondary__info">{episode.air_date}</span> {/*Episode Date*/}
           </div>
         </section>
-        <p className={i + 1 < data.episodes.info.count ? "line" : ""}></p>
-      </div>
+        <p className={i + 1 < data.episodes.info.count ? "line" : ""}></p> {/*Only for mobile view*/}
+      </aside>
     )
   );
 
   return (
     <section className="main__content">
-      <Leftside season={data.episodes.results[0].episode[2]} />
+      <LeftSideEpisodes season={data.episodes.results[0].episode[2]} />
       <section className="episode__list">{episodeElements}</section>
     </section>
   );

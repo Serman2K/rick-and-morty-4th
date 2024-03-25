@@ -30,12 +30,16 @@ function Layout() {
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <p className="header__text">LOREM IPSUM</p>
     </header>
   );
 }
 
 function Footer() {
-  return <footer><p className="footer__text">LOREM IPSUM ©2021</p></footer>;
+  return (
+    <footer className="footer">
+      <p className="footer__text">LOREM IPSUM ©2021</p>
+    </footer>
+  );
 }
