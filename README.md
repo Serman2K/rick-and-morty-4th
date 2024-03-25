@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+App with information on the 4th season of the Rick and Morty series.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visualisation:
+ _______________________________________________________
+|                          Header                       |
+|-------------------------------------------------------|
+|                           Nav*                        |
+|-------------------------------------------------------|
+|         Left Side          |       Actual Route       |
+|                            |                          |
+|                            |                          |
+|                            |                          |
+|                            |                          |
+|                            |                          |
+|                            |                          |
+|____________________________|__________________________|
+|                         Footer                        |
+|_______________________________________________________|
 
-Currently, two official plugins are available:
+*Nav does not appear on the main page("Episodes")
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Each Route has a main component and a side component("LeftSide"), for less code in one file each component has its own css file. Classes used in more than one place have been placed in the main App.css file.

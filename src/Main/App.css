@@ -1,0 +1,123 @@
+#root {
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  height: 5.9375rem;
+  background: linear-gradient(121deg, #DAED49 52.6%, #00BDD4 47.4%);
+  color: #000000;
+  font-weight: bold;
+  width: 100%;
+}
+.header__text {
+  position: relative;
+  display: flex;
+  font-size: 2.1875rem;
+  top: 1.5rem;
+  left: 4.105625rem;
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 4.201875rem;
+  background: #464646;
+  margin-top: 8.7rem;
+  width: 100%;
+  top: 100vh;
+}
+.footer__text {
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1.045rem 8.875rem 0.9375rem 7.875rem;
+}
+
+/* Main part of every route */
+.main__content {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+}
+.secondary__info {
+  color: #959595;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 2.3125rem;
+}
+.primary__info {
+  color: #00BDD4;
+  font-weight: bold;
+  font-size: 1.5625rem;
+  margin-bottom: 0.9375rem;
+}
+.even {
+  color: #BDD800;
+}
+
+/* Button and Nav styling */
+.button__back {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 189, 212, 0.5);
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 1.875rem;
+  padding: 0.4375rem 1rem 0.4375rem 1rem;
+  margin: 1.875rem 0 0 3.125rem;
+  cursor: pointer;
+}
+.button__arrow {
+  width: 1.8125rem;
+}
+.button__space {
+  width: 100%;
+}
+
+@media only screen and (orientation: portrait) {
+  .header {
+    background: #DAED49;
+    justify-content: center;
+    align-items: center;
+    height: 4.4375rem;
+  }
+  .header__text {
+    margin: 0 0 0 0;
+    top: 0;
+    left: 0;
+    font-size: 1.875rem;
+  }
+
+  .footer {
+    height: 3.045rem;
+    margin-top: 4.0625rem;
+  }
+  .footer__text {
+    font-size: 0.875rem;
+  }
+
+  .main__content{
+    margin-top: 1.25rem;
+  }
+  .primary__info {
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem;
+  }
+  .secondary__info {
+    font-size: 0.9375rem;
+    margin-bottom: 0;
+  }
+
+  .button__back {
+    font-size: 1.25rem;
+    margin-left: 1.5625rem;
+  }
+  .button__arrow {
+    width: 1.1875rem;
+  }
+}
