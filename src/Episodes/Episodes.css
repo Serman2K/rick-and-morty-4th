@@ -1,3 +1,4 @@
+/*S0XE0Y*/
 .episode__num {
   font-weight: bold;
   color: black;
@@ -8,19 +9,21 @@
   margin: 8.5rem 0 0 13.0625rem;
 }
 
+/*Episode Title*/
 .primary__info {
   cursor: pointer;
 }
 
+/*includes episode number, title and air date*/
 .episode__element {
   display: flex;
   flex-direction: row;
 }
 
+/*Margins for middle line*/
 .episode__right__Margin {
   margin-right: 2.09375rem;
 }
-
 .episode__left__Margin {
   margin-left: 1.84375rem;
 }
@@ -31,6 +34,7 @@
   flex-direction: column;
   margin-bottom: 2.3125rem;
 }
+/*Line*/
 .episode__title::before {
   content: "";
   position: absolute;

@@ -8,7 +8,7 @@ interface Characters {
 
 export default function LeftSideCharacters(props: Characters) {
   return (
-    <section className="content__left__Margin">
+    <section className="leftSide__characters__margin">
       <div className="characters__title">
         <p>
           Characters of the{" "}

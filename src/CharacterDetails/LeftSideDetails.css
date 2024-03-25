@@ -1,4 +1,4 @@
-.content__left__Margin {
+.leftSide__details__Margin {
   margin-left: 11.25rem;
   margin-top: 1.875rem;
 }
@@ -20,7 +20,7 @@
 }
 
 @media only screen and (orientation: portrait) {
-  .content__left__Margin {
+  .leftSide__details__Margin {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 0;
