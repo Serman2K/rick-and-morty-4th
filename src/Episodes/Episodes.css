@@ -58,7 +58,7 @@
   }
 
   .episode__title {
-    margin: 0 0 0 0;
+    margin: 0;
   }
   .episode__title::before {
     content: none;
@@ -70,7 +70,7 @@
   }
 
   .episode__left__Margin {
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   .line {
