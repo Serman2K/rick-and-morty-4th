@@ -1,11 +1,11 @@
 import { useQuery, gql } from "@apollo/client";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import LeftSideCharacters from "./LeftSideCharacters";
 import Arrow from "../assets/arrow.png";
 import "./Character.css";
 
 function Characters() {
-  const location = useLocation();
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const CHARACTERS_QUERY = gql`
@@ -22,7 +22,7 @@ function Characters() {
   `;
 
   const { data, loading, error } = useQuery(CHARACTERS_QUERY, {
-    variables: { id: location.state.key },
+    variables: { id },
   });
 
   if (loading) return "Loading...";
@@ -44,7 +44,10 @@ function Characters() {
           {character.name}
         </p>
         <p className="secondary__info">{character.species}</p>
-        <div className={i + 1 < data.episode.characters.length ? "line" : ""}></div> {/*Only for mobile view*/}
+        <div
+          className={i + 1 < data.episode.characters.length ? "line" : ""}
+        ></div>{" "}
+        {/*Only for mobile view*/}
       </li>
     )
   );
@@ -64,7 +67,8 @@ function Characters() {
             (data.episode.episode[4] === "1" ? "1" : "") +
             data.episode.episode[5]
           }
-        /> {/*This part sends episode number information, the episode number format is: S0XE0Y, in the extreme case the episode may exceed 9, we check this condition.*/}
+        />{" "}
+        {/*This part sends episode number information, the episode number format is: S0XE0Y, in the extreme case the episode may exceed 9, we check this condition.*/}
         <ul className="characters__list">{characterElements}</ul>
       </section>
     </>

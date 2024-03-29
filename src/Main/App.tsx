@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Episodes />} />
-          <Route path="/characters" element={<Characters />} />
+          <Route path="/characters/:id" element={<Characters />} />
           <Route path="details" element={<CharacterDetails />} />
         </Route>
       </Routes>
