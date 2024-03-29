@@ -2,7 +2,8 @@
   min-height: 100vh;
 }
 
-header {
+/* Header Styling */
+.header {
   display: flex;
   height: 5.9375rem;
   background: linear-gradient(121deg, #DAED49 52.6%, #00BDD4 47.4%);
@@ -18,14 +19,15 @@ header {
   left: 4.105625rem;
 }
 
-footer {
+/* Footer Styling */
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
   position: sticky;
   height: 4.201875rem;
   background: #464646;
-  margin-top: 10rem;
+  margin-top: 8.7rem;
   width: 100%;
   top: 100vh;
 }
@@ -36,22 +38,12 @@ footer {
   margin: 1.045rem 8.875rem 0.9375rem 7.875rem;
 }
 
-.cyan {
-  color: #00BDD4;
-  font-weight: bold;
-}
-
+/* Main part of every route */
 .main__content {
   flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .secondary__info {
   color: #959595;
   font-weight: bold;
@@ -68,6 +60,7 @@ ul {
   color: #BDD800;
 }
 
+/* Button and Nav styling */
 .button__back {
   display: flex;
   align-items: center;
@@ -79,28 +72,34 @@ ul {
   margin: 1.875rem 0 0 3.125rem;
   cursor: pointer;
 }
-.back__arrow {
+.button__arrow {
   width: 1.8125rem;
 }
 .button__space {
   width: 100%;
 }
 
+/* Used in LeftSide Components */
+.cyan {
+  color: #00bdd4;
+  font-weight: bold;
+}
+
 @media only screen and (orientation: portrait) {
-  header {
+  .header {
     background: #DAED49;
     justify-content: center;
     align-items: center;
     height: 4.4375rem;
   }
   .header__text {
-    margin: 0 0 0 0;
+    margin: 0;
     top: 0;
     left: 0;
     font-size: 1.875rem;
   }
 
-  footer {
+  .footer {
     height: 3.045rem;
     margin-top: 4.0625rem;
   }
@@ -111,7 +110,6 @@ ul {
   .main__content{
     margin-top: 1.25rem;
   }
-
   .primary__info {
     font-size: 1.125rem;
     margin-bottom: 0.875rem;
@@ -125,7 +123,7 @@ ul {
     font-size: 1.25rem;
     margin-left: 1.5625rem;
   }
-  .back__arrow {
+  .button__arrow {
     width: 1.1875rem;
   }
 }
