@@ -10,8 +10,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Episodes />} />
-          <Route path="/characters/:id" element={<Characters />} />
-          <Route path="details" element={<CharacterDetails />} />
+          <Route path="/episode/:eid/characters" element={<Characters />} />
+          <Route path="/episode/:eid/character/:cid/details" element={<CharacterDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

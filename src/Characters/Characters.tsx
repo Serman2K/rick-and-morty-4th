@@ -2,52 +2,46 @@ import { useQuery, gql } from "@apollo/client";
 import { useNavigate, useParams } from "react-router-dom";
 import LeftSideCharacters from "./LeftSideCharacters";
 import Arrow from "../assets/arrow.png";
-import "./Character.css";
+import CharacterInterface from "./CharacterInterface";
+import "./Characters.css";
+
+const CHARACTERS_QUERY = gql`
+query GetCharacters($eid: ID!) {
+  episode(id: $eid) {
+    episode
+    characters {
+      id
+      name
+      species
+    }
+  }
+}
+`;
 
 function Characters() {
-  const { id } = useParams();
+  let { eid } = useParams();
   const navigate = useNavigate();
 
-  const CHARACTERS_QUERY = gql`
-    query GetCharacters($id: ID!) {
-      episode(id: $id) {
-        episode
-        characters {
-          id
-          name
-          species
-        }
-      }
-    }
-  `;
-
   const { data, loading, error } = useQuery(CHARACTERS_QUERY, {
-    variables: { id },
+    variables: { eid },
   });
 
   if (loading) return "Loading...";
   if (error) return <pre>{error.message}</pre>;
 
-  interface Character {
-    id: string;
-    name: string;
-    species: string;
-  }
-
   const characterElements = data.episode.characters.map(
-    (character: Character, i: number) => (
+    (character: CharacterInterface, i: number) => (
       <li key={character.id}>
         <p
           className={"primary__info" + ((i + 1) % 2 === 0 ? " even" : "")}
-          onClick={() => navigate("/details", { state: { key: character.id } })}
+          onClick={() => navigate(`/episode/${eid}/character/${character.id}/details`)}
         >
           {character.name}
         </p>
         <p className="secondary__info">{character.species}</p>
         <div
-          className={i + 1 < data.episode.characters.length ? "line" : ""}
+          className={i + 1 < data.episode.characters.length ? "mobile__view__line" : ""}
         ></div>{" "}
-        {/*Only for mobile view*/}
       </li>
     )
   );
@@ -55,7 +49,7 @@ function Characters() {
   return (
     <>
       <nav className="button__space">
-        <button className="button__back" onClick={() => navigate(-1)}>
+        <button className="button__back" onClick={() => navigate("/")}>
           <img className="button__arrow" src={Arrow} />
           Episodes
         </button>
@@ -68,7 +62,7 @@ function Characters() {
             data.episode.episode[5]
           }
         />{" "}
-        {/*This part sends episode number information, the episode number format is: S0XE0Y, in the extreme case the episode may exceed 9, we check this condition.*/}
+        {/*Check if the episode number exceeds 9*/}
         <ul className="characters__list">{characterElements}</ul>
       </section>
     </>

@@ -11,6 +11,7 @@
   font-weight: bold;
   width: 100%;
 }
+
 .header__text {
   position: relative;
   display: flex;
@@ -31,6 +32,7 @@
   width: 100%;
   top: 100vh;
 }
+
 .footer__text {
   color: #CCCCCC;
   font-weight: bold;
@@ -44,18 +46,21 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .secondary__info {
   color: #959595;
   font-weight: bold;
   font-size: 1.25rem;
   margin-bottom: 2.3125rem;
 }
+
 .primary__info {
   color: #00BDD4;
   font-weight: bold;
   font-size: 1.5625rem;
   margin-bottom: 0.9375rem;
 }
+
 .even {
   color: #BDD800;
 }
@@ -72,9 +77,11 @@
   margin: 1.875rem 0 0 3.125rem;
   cursor: pointer;
 }
+
 .button__arrow {
   width: 1.8125rem;
 }
+
 .button__space {
   width: 100%;
 }
@@ -92,6 +99,7 @@
     align-items: center;
     height: 4.4375rem;
   }
+
   .header__text {
     margin: 0;
     top: 0;
@@ -103,17 +111,20 @@
     height: 3.045rem;
     margin-top: 4.0625rem;
   }
+
   .footer__text {
     font-size: 0.875rem;
   }
 
-  .main__content{
+  .main__content {
     margin-top: 1.25rem;
   }
+
   .primary__info {
     font-size: 1.125rem;
     margin-bottom: 0.875rem;
   }
+
   .secondary__info {
     font-size: 0.9375rem;
     margin-bottom: 0;
@@ -123,6 +134,7 @@
     font-size: 1.25rem;
     margin-left: 1.5625rem;
   }
+
   .button__arrow {
     width: 1.1875rem;
   }
