@@ -6,8 +6,8 @@ import CharacterInterface from "./CharacterInterface";
 import "./Characters.css";
 
 const CHARACTERS_QUERY = gql`
-query GetCharacters($eid: ID!) {
-  episode(id: $eid) {
+query GetCharacters($episodeId: ID!) {
+  episode(id: $episodeId) {
     episode
     characters {
       id
@@ -19,11 +19,11 @@ query GetCharacters($eid: ID!) {
 `;
 
 function Characters() {
-  let { eid } = useParams();
+  let { episodeId } = useParams();
   const navigate = useNavigate();
 
   const { data, loading, error } = useQuery(CHARACTERS_QUERY, {
-    variables: { eid },
+    variables: { episodeId },
   });
 
   if (loading) return "Loading...";
@@ -34,7 +34,7 @@ function Characters() {
       <li key={character.id}>
         <p
           className={"primary__info" + ((i + 1) % 2 === 0 ? " even" : "")}
-          onClick={() => navigate(`/episode/${eid}/character/${character.id}/details`)}
+          onClick={() => navigate(`/episode/${episodeId}/character/${character.id}/details`)}
         >
           {character.name}
         </p>

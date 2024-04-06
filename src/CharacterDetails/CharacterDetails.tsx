@@ -5,8 +5,8 @@ import Arrow from "../assets/arrow.png";
 import "./CharacterDetails.css";
 
 const DETAILS_QUERY = gql`
-  query GetCharacterDetails($cid: ID!) {
-    character(id: $cid) {
+  query GetCharacterDetails($characterId: ID!) {
+    character(id: $characterId) {
       id
       name
       image
@@ -25,12 +25,12 @@ const DETAILS_QUERY = gql`
 `;
 
 function CharacterDetails() {
-  const { eid, cid } = useParams();
+  const { episodeId, characterId } = useParams();
   const navigate = useNavigate();
 
 
   const { data, loading, error } = useQuery(DETAILS_QUERY, {
-    variables: { eid, cid },
+    variables: { episodeId, characterId },
   });
 
   if (loading) return "Loading...";
@@ -39,7 +39,7 @@ function CharacterDetails() {
   return (
     <>
       <nav className="button__space">
-        <button className="button__back" onClick={() => navigate(`/episode/${eid}/characters`)}>
+        <button className="button__back" onClick={() => navigate(`/episode/${episodeId}/characters`)}>
           <img className="button__arrow" src={Arrow} />
           Characters
         </button>

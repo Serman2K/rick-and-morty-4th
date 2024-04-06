@@ -4,7 +4,7 @@ import LeftSideEpisodes from "./LeftSideEpisodes";
 import EpisodeInterface from "./EpisodeInterface";
 import "./Episodes.css";
 
-const EPISODES_QUERY = gql`
+export const EPISODES_QUERY = gql`
   {
     episodes(filter: { episode: "S04" }) {
       info {

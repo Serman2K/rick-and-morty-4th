@@ -7,14 +7,14 @@ describe("Rick & Morty app testing", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch();
     page = await browser.newPage();
-    await page.goto("http://localhost:5173");
+    await page.goto("http://localhost:5173/");
   });
 
   it("Navigate to episode's characters list", async () => {
     await page.waitForSelector(".primary__info");
     await page.click(".primary__info"); //go to episode's characters
 
-    expect(page.url()).toContain("/characters"); //http://localhost:5173/characters
+    expect(page.url()).toContain("/characters");
 
     const state = await page.evaluate(() => window.history.state);
     expect(state.key).toBeDefined();
@@ -26,7 +26,7 @@ describe("Rick & Morty app testing", () => {
     await page.waitForSelector(".primary__info");
     await page.click(".primary__info"); //go to character's details
 
-    expect(page.url()).toContain("/details"); //http://localhost:5173/details
+    expect(page.url()).toContain("/details");
     const state = await page.evaluate(() => window.history.state);
     expect(state.key).toBeDefined();
   }, 20000);
