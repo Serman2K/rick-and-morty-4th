@@ -31,11 +31,11 @@ describe("Episodes component", () => {
               episode: "S04E02",
               name: "The Old Man and the Seat",
               air_date: "November 17, 2019",
-            },
-          ],
-        },
-      },
-    },
+            }
+          ]
+        }
+      }
+    }
   };
 
   test("Render episodes without errors", async () => {

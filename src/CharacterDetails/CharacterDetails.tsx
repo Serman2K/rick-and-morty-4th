@@ -4,7 +4,7 @@ import LeftSideDetails from "./LeftSideDetails.tsx";
 import Arrow from "../assets/arrow.png";
 import "./CharacterDetails.css";
 
-const DETAILS_QUERY = gql`
+export const DETAILS_QUERY = gql`
   query GetCharacterDetails($characterId: ID!) {
     character(id: $characterId) {
       id
