@@ -5,7 +5,7 @@ import Arrow from "../assets/arrow.png";
 import CharacterInterface from "./CharacterInterface";
 import "./Characters.css";
 
-const CHARACTERS_QUERY = gql`
+export const CHARACTERS_QUERY = gql`
 query GetCharacters($episodeId: ID!) {
   episode(id: $episodeId) {
     episode
