@@ -16,10 +16,10 @@ export default function Leftside(props: Episode) {
               (props.season === "1"
                 ? "st"
                 : props.season === "2"
-                ? "nd"
-                : props.season === "3"
-                ? "rd"
-                : "th")}
+                  ? "nd"
+                  : props.season === "3"
+                    ? "rd"
+                    : "th")}
           </b>
         </p>
         <p>season of the series</p>

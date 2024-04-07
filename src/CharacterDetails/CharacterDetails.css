@@ -15,7 +15,7 @@
     width: 100%;
   }
 
-  .line {
+  .mobile__view__line {
     background: #d1d1d1;
     height: 1px;
     margin: 1.3125rem 0 1.125rem 0.0625rem;

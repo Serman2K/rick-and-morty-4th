@@ -4,7 +4,8 @@
   min-height: 14.875rem;
   line-height: 1.1;
 }
-.main__title > p {
+
+.main__title>p {
   line-height: 1.05;
 }
 

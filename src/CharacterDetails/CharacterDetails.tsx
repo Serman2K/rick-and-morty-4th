@@ -1,35 +1,36 @@
 import { useQuery, gql } from "@apollo/client";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import LeftSideDetails from "./LeftSideDetails.tsx";
 import Arrow from "../assets/arrow.png";
 import "./CharacterDetails.css";
 
-function CharacterDetails() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const DETAILS_QUERY = gql`
-    query GetCharacterDetails($id: ID!) {
-      character(id: $id) {
-        id
+export const DETAILS_QUERY = gql`
+  query GetCharacterDetails($characterId: ID!) {
+    character(id: $characterId) {
+      id
+      name
+      image
+      status
+      species
+      type
+      gender
+      origin {
         name
-        image
-        status
-        species
-        type
-        gender
-        origin {
-          name
-        }
-        location {
-          name
-        }
+      }
+      location {
+        name
       }
     }
-  `;
+  }
+`;
+
+function CharacterDetails() {
+  const { episodeId, characterId } = useParams();
+  const navigate = useNavigate();
+
 
   const { data, loading, error } = useQuery(DETAILS_QUERY, {
-    variables: { id: location.state.key },
+    variables: { episodeId, characterId },
   });
 
   if (loading) return "Loading...";
@@ -38,7 +39,7 @@ function CharacterDetails() {
   return (
     <>
       <nav className="button__space">
-        <button className="button__back" onClick={() => navigate(-1)}>
+        <button className="button__back" onClick={() => navigate(`/episode/${episodeId}/characters`)}>
           <img className="button__arrow" src={Arrow} />
           Characters
         </button>
@@ -53,35 +54,35 @@ function CharacterDetails() {
             <dt className="primary__info  cursor">{data.character.status}</dt>
             <dd className="secondary__info">Status</dd>
           </div>
-          <div className="line"></div> {/*Only for mobile view*/}
+          <div className="mobile__view__line"></div>
           <div>
             <dt className="primary__info even cursor">
               {data.character.species}
             </dt>
             <dd className="secondary__info">Species</dd>
           </div>
-          <div className="line"></div> {/*Only for mobile view*/}
+          <div className="mobile__view__line"></div>
           <div>
             <dt className="primary__info cursor">
               {data.character.type === "" ? "-" : data.character.type}
             </dt>
             <dd className="secondary__info">Type</dd>
           </div>
-          <div className="line"></div> {/*Only for mobile view*/}
+          <div className="mobile__view__line"></div>
           <div>
             <dt className="primary__info even cursor">
               {data.character.gender}
             </dt>
             <dd className="secondary__info">Gender</dd>
           </div>
-          <div className="line"></div> {/*Only for mobile view*/}
+          <div className="mobile__view__line"></div>
           <div>
             <dt className="primary__info cursor">
               {data.character.origin.name}
             </dt>
             <dd className="secondary__info">Origin</dd>
           </div>
-          <div className="line"></div> {/*Only for mobile view*/}
+          <div className="mobile__view__line"></div>
           <div>
             <dt className="primary__info even cursor">
               {data.character.location.name}

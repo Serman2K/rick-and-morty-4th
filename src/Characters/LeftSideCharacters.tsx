@@ -17,10 +17,10 @@ export default function LeftSideCharacters(props: Characters) {
               (props.episode === "1"
                 ? "st"
                 : props.episode === "2"
-                ? "nd"
-                : props.episode === "3"
-                ? "rd"
-                : "th")}
+                  ? "nd"
+                  : props.episode === "3"
+                    ? "rd"
+                    : "th")}
           </b>
         </p>
         <p>
@@ -30,10 +30,10 @@ export default function LeftSideCharacters(props: Characters) {
               (props.season === "1"
                 ? "st"
                 : props.season === "2"
-                ? "nd"
-                : props.season === "3"
-                ? "rd"
-                : "th")}
+                  ? "nd"
+                  : props.season === "3"
+                    ? "rd"
+                    : "th")}
           </b>
         </p>
         <p>season of the series</p>
