@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 import "./App.css";
 import Episodes from "../Episodes/Episodes";
 import Characters from "../Characters/Characters";
@@ -12,7 +12,7 @@ export default function App() {
           <Route index element={<Episodes />} />
           <Route path="/episode/:episodeId/characters" element={<Characters />} />
           <Route path="/episode/:episodeId/character/:characterId/details" element={<CharacterDetails />} />
-          <Route path="*" element={<Episodes />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
