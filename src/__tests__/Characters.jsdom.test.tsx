@@ -57,6 +57,9 @@ describe("Characters component", () => {
       expect(screen.getByText("Rick Sanchez")).toBeInTheDocument();
       expect(screen.getByText("Morty Smith")).toBeInTheDocument();
 
+      const species = screen.getAllByText(/Human/i);
+      expect(species.length).toEqual(2);
+
     });
   });
 
